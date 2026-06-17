@@ -1,0 +1,32 @@
+Linear Regression Using Normal Equation
+Easy
+Machine Learning
+
+Write a Python function that performs linear regression using the normal equation. The function should take a matrix X (features) and a vector y (target) as input, and return the coefficients of the linear regression model. Round your answer to four decimal places, -0.0 is a valid result for rounding a very small number.
+
+Example:
+Input:
+X = [[1, 1], [1, 2], [1, 3]], y = [1, 2, 3]
+Output:
+[0.0, 1.0]
+Reasoning:
+The linear model is y = 0.0 + 1.0*x, perfectly fitting the input data.
+
+Learn About topic
+Linear Regression Using the Normal Equation
+Linear regression aims to model the relationship between a scalar dependent variable ( y ) and one or more explanatory variables (or independent variables) ( X ). The normal equation provides an analytical solution to find the coefficients ( \theta ) that minimize the cost function for linear regression.
+
+Given a matrix ( X ) (with each row representing a training example and each column a feature) and a vector ( y ) (representing the target values), the normal equation is:
+
+θ = (X.T X)−1 X T y 
+θ = (X T X) −1 X T y
+Explanation of Terms
+( X^T ) is the transpose of ( X ).
+( (X^TX)^{-1} ) is the inverse of the matrix ( X^TX ).
+( y ) is the vector of target values.
+Key Points
+Feature Scaling: This method does not require feature scaling.
+Learning Rate: There is no need to choose a learning rate.
+Computational Cost: Computing the inverse of ( X^TX ) can be computationally expensive if the number of features is very large.
+Practical Implementation
+A practical implementation involves augmenting ( X ) with a column of ones to account for the intercept term and then applying the normal equation directly to compute ( \theta ).
