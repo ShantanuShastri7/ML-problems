@@ -1,0 +1,14 @@
+Principal Component Analysis (PCA) Implementation
+Medium
+Machine Learning
+
+
+Write a Python function that performs Principal Component Analysis (PCA) from scratch. The function should take a 2D NumPy array as input, where each row represents a data sample and each column represents a feature. The function should standardize the dataset, compute the covariance matrix, find the eigenvalues and eigenvectors, and return the principal components (the eigenvectors corresponding to the largest eigenvalues). The function should also take an integer k as input, representing the number of principal components to return.
+
+Sign Convention: Eigenvectors can point in either direction (if v is valid, so is -v). To ensure consistent results across different environments, apply this rule: for each eigenvector, find its first element with absolute value > 1e-10; if that element is negative, multiply the entire eigenvector by -1.
+
+Note: Use np.linalg.eigh for eigendecomposition since covariance matrices are symmetric. This provides more numerically stable and consistent results than np.linalg.eig.
+
+Example:
+Input:
+data = np.array([[1, 2], [3, 4], [5, 6]]), k = 1
